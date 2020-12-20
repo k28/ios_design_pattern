@@ -21,6 +21,10 @@ protocol TaskListPresenterOutput: AnyObject {
     func updateTasks(_ tasks: [Task])
     func transitionToTaskDetail(_ task: Task)
     func transitionToAddNewTask()
+    
+    // ダイアログを出す, 消す, エラー表示する
+    func showDialog(_ message: String)
+    func closeDialog()
 }
 
 final class TaskListPresenter: TaskListPresenterInput {
@@ -55,7 +59,16 @@ final class TaskListPresenter: TaskListPresenterInput {
     }
     
     func onSetupDidFinish() {
+        // 表示するデータを取得してViewを更新します
+        
+        // ダイアログを出す
+        view.showDialog("データ取得中...")
+        
         model.fetchTaskList(completion: { [weak self] result in
+            
+            // ダイアログを消す
+            self?.view.closeDialog()
+            
             switch result {
             case .success(let taskList):
                 self?.taskList = taskList

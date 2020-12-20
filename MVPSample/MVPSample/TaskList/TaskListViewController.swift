@@ -83,5 +83,13 @@ extension TaskListViewController: TaskListPresenterOutput {
         NSLog("transitionToAddNewTask")
     }
 
+    func showDialog(_ message: String) {
+        Action.showDialog(view: self.navigationController?.view ?? UIView(), message)
+    }
+    
+    func closeDialog() {
+        Action.closeDialog(view: self.navigationController?.view ?? UIView())
+    }
+    
 }
 

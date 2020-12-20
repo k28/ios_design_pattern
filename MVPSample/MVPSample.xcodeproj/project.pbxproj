@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,10 @@
 		E5AC7AF8258D978A00CB5C68 /* TaskListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AC7AF7258D978A00CB5C68 /* TaskListPresenter.swift */; };
 		E5AC7AFE258D97FE00CB5C68 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AC7AFD258D97FE00CB5C68 /* Task.swift */; };
 		E5AC7B06258D99A400CB5C68 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AC7B05258D99A400CB5C68 /* Result.swift */; };
+		E5AC7B11258EADDB00CB5C68 /* MBProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = E5AC7B10258EADDB00CB5C68 /* MBProgressHUD */; };
+		E5AC7B17258EB17F00CB5C68 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AC7B16258EB17F00CB5C68 /* Action.swift */; };
+		E5AC7B20258EB1E500CB5C68 /* DispatchQueue-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AC7B1F258EB1E500CB5C68 /* DispatchQueue-Extension.swift */; };
+		E5AC7B46258ED1ED00CB5C68 /* TaskListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AC7B45258ED1ED00CB5C68 /* TaskListPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,9 @@
 		E5AC7AF7258D978A00CB5C68 /* TaskListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListPresenter.swift; sourceTree = "<group>"; };
 		E5AC7AFD258D97FE00CB5C68 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		E5AC7B05258D99A400CB5C68 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		E5AC7B16258EB17F00CB5C68 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		E5AC7B1F258EB1E500CB5C68 /* DispatchQueue-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue-Extension.swift"; sourceTree = "<group>"; };
+		E5AC7B45258ED1ED00CB5C68 /* TaskListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListPresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5AC7B11258EADDB00CB5C68 /* MBProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +103,7 @@
 				E5AC7ABC258D951700CB5C68 /* MVPSampleTests */,
 				E5AC7AC7258D951700CB5C68 /* MVPSampleUITests */,
 				E5AC7AA4258D951600CB5C68 /* Products */,
+				E5AC7B2D258ED13600CB5C68 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +120,8 @@
 		E5AC7AA5258D951600CB5C68 /* MVPSample */ = {
 			isa = PBXGroup;
 			children = (
+				E5AC7B1E258EB1C700CB5C68 /* Extension */,
+				E5AC7B15258EAF8300CB5C68 /* Common */,
 				E5AC7AFC258D97F200CB5C68 /* Model */,
 				E5AC7AD9258D954400CB5C68 /* TaskList */,
 				E5AC7AA6258D951600CB5C68 /* AppDelegate.swift */,
@@ -127,6 +138,7 @@
 		E5AC7ABC258D951700CB5C68 /* MVPSampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				E5AC7B39258ED18700CB5C68 /* TaskList */,
 				E5AC7ABD258D951700CB5C68 /* MVPSampleTests.swift */,
 				E5AC7ABF258D951700CB5C68 /* Info.plist */,
 			);
@@ -162,6 +174,37 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		E5AC7B15258EAF8300CB5C68 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E5AC7B16258EB17F00CB5C68 /* Action.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E5AC7B1E258EB1C700CB5C68 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E5AC7B1F258EB1E500CB5C68 /* DispatchQueue-Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E5AC7B2D258ED13600CB5C68 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5AC7B39258ED18700CB5C68 /* TaskList */ = {
+			isa = PBXGroup;
+			children = (
+				E5AC7B45258ED1ED00CB5C68 /* TaskListPresenterTests.swift */,
+			);
+			path = TaskList;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -178,6 +221,9 @@
 			dependencies = (
 			);
 			name = MVPSample;
+			packageProductDependencies = (
+				E5AC7B10258EADDB00CB5C68 /* MBProgressHUD */,
+			);
 			productName = MVPSample;
 			productReference = E5AC7AA3258D951600CB5C68 /* MVPSample.app */;
 			productType = "com.apple.product-type.application";
@@ -196,6 +242,8 @@
 				E5AC7ABB258D951700CB5C68 /* PBXTargetDependency */,
 			);
 			name = MVPSampleTests;
+			packageProductDependencies = (
+			);
 			productName = MVPSampleTests;
 			productReference = E5AC7AB9258D951700CB5C68 /* MVPSampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -249,6 +297,9 @@
 				Base,
 			);
 			mainGroup = E5AC7A9A258D951600CB5C68;
+			packageReferences = (
+				E5AC7B0F258EADDB00CB5C68 /* XCRemoteSwiftPackageReference "MBProgressHUD" */,
+			);
 			productRefGroup = E5AC7AA4258D951600CB5C68 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -294,6 +345,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5AC7AF0258D976E00CB5C68 /* TaskListModel.swift in Sources */,
+				E5AC7B20258EB1E500CB5C68 /* DispatchQueue-Extension.swift in Sources */,
+				E5AC7B17258EB17F00CB5C68 /* Action.swift in Sources */,
 				E5AC7AAB258D951600CB5C68 /* ViewController.swift in Sources */,
 				E5AC7AE6258D95BC00CB5C68 /* TaskListViewController.swift in Sources */,
 				E5AC7AA7258D951600CB5C68 /* AppDelegate.swift in Sources */,
@@ -309,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5AC7ABE258D951700CB5C68 /* MVPSampleTests.swift in Sources */,
+				E5AC7B46258ED1ED00CB5C68 /* TaskListPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,6 +681,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E5AC7B0F258EADDB00CB5C68 /* XCRemoteSwiftPackageReference "MBProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jdg/MBProgressHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E5AC7B10258EADDB00CB5C68 /* MBProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E5AC7B0F258EADDB00CB5C68 /* XCRemoteSwiftPackageReference "MBProgressHUD" */;
+			productName = MBProgressHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E5AC7A9B258D951600CB5C68 /* Project object */;
 }
