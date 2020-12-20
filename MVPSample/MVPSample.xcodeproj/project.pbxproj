@@ -13,7 +13,6 @@
 		E5AC7AAE258D951600CB5C68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5AC7AAC258D951600CB5C68 /* Main.storyboard */; };
 		E5AC7AB0258D951700CB5C68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5AC7AAF258D951700CB5C68 /* Assets.xcassets */; };
 		E5AC7AB3258D951700CB5C68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5AC7AB1258D951700CB5C68 /* LaunchScreen.storyboard */; };
-		E5AC7ABE258D951700CB5C68 /* MVPSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AC7ABD258D951700CB5C68 /* MVPSampleTests.swift */; };
 		E5AC7AC9258D951700CB5C68 /* MVPSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AC7AC8258D951700CB5C68 /* MVPSampleUITests.swift */; };
 		E5AC7AE6258D95BC00CB5C68 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AC7AE5258D95BC00CB5C68 /* TaskListViewController.swift */; };
 		E5AC7AEB258D95CD00CB5C68 /* TaskList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5AC7AEA258D95CD00CB5C68 /* TaskList.storyboard */; };
@@ -54,7 +53,6 @@
 		E5AC7AB2258D951700CB5C68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5AC7AB4258D951700CB5C68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5AC7AB9258D951700CB5C68 /* MVPSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVPSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E5AC7ABD258D951700CB5C68 /* MVPSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPSampleTests.swift; sourceTree = "<group>"; };
 		E5AC7ABF258D951700CB5C68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5AC7AC4258D951700CB5C68 /* MVPSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVPSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5AC7AC8258D951700CB5C68 /* MVPSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPSampleUITests.swift; sourceTree = "<group>"; };
@@ -139,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				E5AC7B39258ED18700CB5C68 /* TaskList */,
-				E5AC7ABD258D951700CB5C68 /* MVPSampleTests.swift */,
 				E5AC7ABF258D951700CB5C68 /* Info.plist */,
 			);
 			path = MVPSampleTests;
@@ -361,7 +358,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5AC7ABE258D951700CB5C68 /* MVPSampleTests.swift in Sources */,
 				E5AC7B46258ED1ED00CB5C68 /* TaskListPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

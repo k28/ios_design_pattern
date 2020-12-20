@@ -63,33 +63,37 @@ class TaskListPresenterTests: XCTestCase {
         return presenter
     }
     
-    func test_OnSetupDidFinish_Success() {
+    func test_OnSetupDidFinish() {
         let presenter = makeTestPresenter()
         
         var index = 0
-        // 成功パターン
-        // ダイアログを出す
-        view.onShowDialog = {
-            XCTAssertEqual(0, index)
-            index += 1
-        }
-        // model.fetchTaskListをcall
-        model.onFetchTaskList = {
-            XCTAssertEqual(1, index)
-            index += 1
-        }
-        // ダイアログを消す
-        view.onCloseDialog = {
-            XCTAssertEqual(2, index)
-            index += 1
-        }
-        // view.updateTaskをcall
-        view.onUpdateTasks = {
-            XCTAssertEqual(3, index)
-            index += 1
-        }
         
-        presenter.onSetupDidFinish()
+        XCTContext.runActivity(named: "SetupDidFinish") { _ in
+            XCTContext.runActivity(named: "成功パターン") { _ in
+                // ダイアログを出す
+                view.onShowDialog = {
+                    XCTAssertEqual(0, index)
+                    index += 1
+                }
+                // model.fetchTaskListをcall
+                model.onFetchTaskList = {
+                    XCTAssertEqual(1, index)
+                    index += 1
+                }
+                // ダイアログを消す
+                view.onCloseDialog = {
+                    XCTAssertEqual(2, index)
+                    index += 1
+                }
+                // view.updateTaskをcall
+                view.onUpdateTasks = {
+                    XCTAssertEqual(3, index)
+                    index += 1
+                }
+                
+                presenter.onSetupDidFinish()
+            }
+        }
     }
     
     func test_numberOfTask() {
