@@ -24,6 +24,9 @@
 		E5AC7B17258EB17F00CB5C68 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AC7B16258EB17F00CB5C68 /* Action.swift */; };
 		E5AC7B20258EB1E500CB5C68 /* DispatchQueue-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AC7B1F258EB1E500CB5C68 /* DispatchQueue-Extension.swift */; };
 		E5AC7B46258ED1ED00CB5C68 /* TaskListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AC7B45258ED1ED00CB5C68 /* TaskListPresenterTests.swift */; };
+		E5AC7B4F25922DEB00CB5C68 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AC7B4E25922DEB00CB5C68 /* AddTaskViewController.swift */; };
+		E5AC7B5725922DFF00CB5C68 /* AddTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5AC7B5625922DFF00CB5C68 /* AddTask.storyboard */; };
+		E5AC7B5C2592324B00CB5C68 /* AddTaskPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AC7B5B2592324B00CB5C68 /* AddTaskPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,9 @@
 		E5AC7B16258EB17F00CB5C68 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		E5AC7B1F258EB1E500CB5C68 /* DispatchQueue-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue-Extension.swift"; sourceTree = "<group>"; };
 		E5AC7B45258ED1ED00CB5C68 /* TaskListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListPresenterTests.swift; sourceTree = "<group>"; };
+		E5AC7B4E25922DEB00CB5C68 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		E5AC7B5625922DFF00CB5C68 /* AddTask.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddTask.storyboard; sourceTree = "<group>"; };
+		E5AC7B5B2592324B00CB5C68 /* AddTaskPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +128,7 @@
 				E5AC7B15258EAF8300CB5C68 /* Common */,
 				E5AC7AFC258D97F200CB5C68 /* Model */,
 				E5AC7AD9258D954400CB5C68 /* TaskList */,
+				E5AC7B4D258F55E800CB5C68 /* AddTask */,
 				E5AC7AA6258D951600CB5C68 /* AppDelegate.swift */,
 				E5AC7AA8258D951600CB5C68 /* SceneDelegate.swift */,
 				E5AC7AAA258D951600CB5C68 /* ViewController.swift */,
@@ -200,6 +207,16 @@
 				E5AC7B45258ED1ED00CB5C68 /* TaskListPresenterTests.swift */,
 			);
 			path = TaskList;
+			sourceTree = "<group>";
+		};
+		E5AC7B4D258F55E800CB5C68 /* AddTask */ = {
+			isa = PBXGroup;
+			children = (
+				E5AC7B4E25922DEB00CB5C68 /* AddTaskViewController.swift */,
+				E5AC7B5625922DFF00CB5C68 /* AddTask.storyboard */,
+				E5AC7B5B2592324B00CB5C68 /* AddTaskPresenter.swift */,
+			);
+			path = AddTask;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +333,7 @@
 				E5AC7AB3258D951700CB5C68 /* LaunchScreen.storyboard in Resources */,
 				E5AC7AEB258D95CD00CB5C68 /* TaskList.storyboard in Resources */,
 				E5AC7AB0258D951700CB5C68 /* Assets.xcassets in Resources */,
+				E5AC7B5725922DFF00CB5C68 /* AddTask.storyboard in Resources */,
 				E5AC7AAE258D951600CB5C68 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,11 +360,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5AC7AF0258D976E00CB5C68 /* TaskListModel.swift in Sources */,
+				E5AC7B5C2592324B00CB5C68 /* AddTaskPresenter.swift in Sources */,
 				E5AC7B20258EB1E500CB5C68 /* DispatchQueue-Extension.swift in Sources */,
 				E5AC7B17258EB17F00CB5C68 /* Action.swift in Sources */,
 				E5AC7AAB258D951600CB5C68 /* ViewController.swift in Sources */,
 				E5AC7AE6258D95BC00CB5C68 /* TaskListViewController.swift in Sources */,
 				E5AC7AA7258D951600CB5C68 /* AppDelegate.swift in Sources */,
+				E5AC7B4F25922DEB00CB5C68 /* AddTaskViewController.swift in Sources */,
 				E5AC7AA9258D951600CB5C68 /* SceneDelegate.swift in Sources */,
 				E5AC7AFE258D97FE00CB5C68 /* Task.swift in Sources */,
 				E5AC7B06258D99A400CB5C68 /* Result.swift in Sources */,

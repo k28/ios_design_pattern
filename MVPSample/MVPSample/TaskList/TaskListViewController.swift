@@ -79,8 +79,16 @@ extension TaskListViewController: TaskListPresenterOutput {
     }
     
     func transitionToAddNewTask() {
-        //
-        NSLog("transitionToAddNewTask")
+        guard let addTaskVC = UIStoryboard(name: "AddTask", bundle: nil).instantiateInitialViewController() as? AddTaskViewController else {
+            NSLog("Faild to initialize AddTaskViewController")
+            return
+        }
+
+        // PresenterのセットアップとViewControllerにPresenterを設定
+        let presenter = AddTaskPresenter(view: addTaskVC, model: Task())
+        addTaskVC.inject(presenter)
+        
+        navigationController?.pushViewController(addTaskVC, animated: true)
     }
 
     func showDialog(_ message: String) {
