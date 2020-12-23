@@ -85,7 +85,8 @@ extension TaskListViewController: TaskListPresenterOutput {
         }
 
         // PresenterのセットアップとViewControllerにPresenterを設定
-        let presenter = AddTaskPresenter(view: addTaskVC, model: Task())
+        let model = AddTaskModel(task: Task())
+        let presenter = AddTaskPresenter(view: addTaskVC, model: model)
         addTaskVC.inject(presenter)
         
         navigationController?.pushViewController(addTaskVC, animated: true)

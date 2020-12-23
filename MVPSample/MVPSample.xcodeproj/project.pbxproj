@@ -27,6 +27,7 @@
 		E5AC7B4F25922DEB00CB5C68 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AC7B4E25922DEB00CB5C68 /* AddTaskViewController.swift */; };
 		E5AC7B5725922DFF00CB5C68 /* AddTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5AC7B5625922DFF00CB5C68 /* AddTask.storyboard */; };
 		E5AC7B5C2592324B00CB5C68 /* AddTaskPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AC7B5B2592324B00CB5C68 /* AddTaskPresenter.swift */; };
+		E5E959982593EE5500614323 /* AddTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E959972593EE5500614323 /* AddTaskModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		E5AC7B4E25922DEB00CB5C68 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		E5AC7B5625922DFF00CB5C68 /* AddTask.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddTask.storyboard; sourceTree = "<group>"; };
 		E5AC7B5B2592324B00CB5C68 /* AddTaskPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskPresenter.swift; sourceTree = "<group>"; };
+		E5E959972593EE5500614323 /* AddTaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +217,7 @@
 				E5AC7B4E25922DEB00CB5C68 /* AddTaskViewController.swift */,
 				E5AC7B5625922DFF00CB5C68 /* AddTask.storyboard */,
 				E5AC7B5B2592324B00CB5C68 /* AddTaskPresenter.swift */,
+				E5E959972593EE5500614323 /* AddTaskModel.swift */,
 			);
 			path = AddTask;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				E5AC7AAB258D951600CB5C68 /* ViewController.swift in Sources */,
 				E5AC7AE6258D95BC00CB5C68 /* TaskListViewController.swift in Sources */,
 				E5AC7AA7258D951600CB5C68 /* AppDelegate.swift in Sources */,
+				E5E959982593EE5500614323 /* AddTaskModel.swift in Sources */,
 				E5AC7B4F25922DEB00CB5C68 /* AddTaskViewController.swift in Sources */,
 				E5AC7AA9258D951600CB5C68 /* SceneDelegate.swift in Sources */,
 				E5AC7AFE258D97FE00CB5C68 /* Task.swift in Sources */,

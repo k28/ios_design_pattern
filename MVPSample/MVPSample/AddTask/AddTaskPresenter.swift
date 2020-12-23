@@ -38,34 +38,35 @@ protocol AddTaskPresenterOutput: AnyObject {
 final class AddTaskPresenter : AddTaskPresenterInput {
     
     private weak var view: AddTaskPresenterOutput!
-    var model: Task
+    var model: AddTaskModelInput
     
-    init(view: AddTaskPresenterOutput, model: Task) {
+    init(view: AddTaskPresenterOutput, model: AddTaskModelInput) {
         self.view = view
         self.model = model
     }
     
     func onViewDidLoad() {
         view.updateAddButton(false)
-        view.updateTask(model)
+        view.updateTask(model.task)
     }
     
     func onSelectAddTask() {
         // TODO: TaskListに追加する
+        model.addTask(model.task)
     }
     
     func taskTitleShouldChange(_ text: inout String) {
     }
 
     func taskTitleDidChange(_ text: String) {
-        model.title = text
-        view.updateTask(model)
+        model.task.title = text
+        view.updateTask(model.task)
         view.updateAddButton(isAddButtonEnable())
     }
     
     func dedlineDidChange(_ deadline: Date) {
-        model.deadline = deadline
-        view.updateTask(model)
+        model.task.deadline = deadline
+        view.updateTask(model.task)
         view.updateAddButton(isAddButtonEnable())
     }
     
@@ -73,8 +74,8 @@ final class AddTaskPresenter : AddTaskPresenterInput {
 
 extension AddTaskPresenter {
     func isAddButtonEnable() -> Bool {
-        if model.title.isEmpty     { return false }
-        if model.deadline < Date() { return false }
+        if model.task.title.isEmpty     { return false }
+        if model.task.deadline < Date() { return false }
         
         return true
     }
