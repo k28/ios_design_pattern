@@ -214,10 +214,10 @@
 		E5AC7B4D258F55E800CB5C68 /* AddTask */ = {
 			isa = PBXGroup;
 			children = (
-				E5AC7B4E25922DEB00CB5C68 /* AddTaskViewController.swift */,
 				E5AC7B5625922DFF00CB5C68 /* AddTask.storyboard */,
-				E5AC7B5B2592324B00CB5C68 /* AddTaskPresenter.swift */,
 				E5E959972593EE5500614323 /* AddTaskModel.swift */,
+				E5AC7B5B2592324B00CB5C68 /* AddTaskPresenter.swift */,
+				E5AC7B4E25922DEB00CB5C68 /* AddTaskViewController.swift */,
 			);
 			path = AddTask;
 			sourceTree = "<group>";
