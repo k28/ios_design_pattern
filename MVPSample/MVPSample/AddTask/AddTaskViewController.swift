@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import EZUControl
 
 class AddTaskViewController: UIViewController {
 
-    @IBOutlet weak var titleTextField_: UITextField!
+    @IBOutlet weak var titleTextField_: EZUTextField!
     @IBOutlet weak var deadLineDatePicker_: UIDatePicker!
     
     var addButton: UIBarButtonItem = UIBarButtonItem()
@@ -26,7 +27,9 @@ class AddTaskViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = addButton
         
         // コントロールの値変更のアクションを設定する
-        titleTextField_.addTarget(self, action: #selector(titleFiedlDidChange(_:)), for: UIControl.Event.editingChanged)
+        titleTextField_.onChangeValue = { [weak self] text in
+            self?.presender.taskTitleDidChange(text)
+        }
         deadLineDatePicker_.addTarget(self, action: #selector(deadlineDidChange(_:)), for: UIControl.Event.valueChanged)
         
         presender.onViewDidLoad()
@@ -48,7 +51,6 @@ class AddTaskViewController: UIViewController {
 }
 
 extension AddTaskViewController: AddTaskPresenterOutput {
-    
     func updateAddButton(_ enable: Bool) {
         addButton.isEnabled = enable
     }
@@ -63,6 +65,5 @@ extension AddTaskViewController: AddTaskPresenterOutput {
     
     func closeDialog() {
     }
-    
-    
 }
+

@@ -28,6 +28,12 @@
 		E5AC7B5725922DFF00CB5C68 /* AddTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5AC7B5625922DFF00CB5C68 /* AddTask.storyboard */; };
 		E5AC7B5C2592324B00CB5C68 /* AddTaskPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AC7B5B2592324B00CB5C68 /* AddTaskPresenter.swift */; };
 		E5E959982593EE5500614323 /* AddTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E959972593EE5500614323 /* AddTaskModel.swift */; };
+		E5E959AD2595648500614323 /* EZUControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5E959A42595648400614323 /* EZUControl.framework */; };
+		E5E959B42595648500614323 /* EZUControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E959B32595648500614323 /* EZUControlTests.swift */; };
+		E5E959B62595648500614323 /* EZUControl.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E959A62595648400614323 /* EZUControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5E959B92595648500614323 /* EZUControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5E959A42595648400614323 /* EZUControl.framework */; };
+		E5E959BA2595648500614323 /* EZUControl.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E5E959A42595648400614323 /* EZUControl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E5E959C8259564AA00614323 /* EZUTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E959C7259564AA00614323 /* EZUTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +51,42 @@
 			remoteGlobalIDString = E5AC7AA2258D951600CB5C68;
 			remoteInfo = MVPSample;
 		};
+		E5E959AE2595648500614323 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5AC7A9B258D951600CB5C68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5E959A32595648400614323;
+			remoteInfo = EZUControl;
+		};
+		E5E959B02595648500614323 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5AC7A9B258D951600CB5C68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5AC7AA2258D951600CB5C68;
+			remoteInfo = MVPSample;
+		};
+		E5E959B72595648500614323 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5AC7A9B258D951600CB5C68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5E959A32595648400614323;
+			remoteInfo = EZUControl;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E5E959BE2595648500614323 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E5E959BA2595648500614323 /* EZUControl.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E5AC7AA3258D951600CB5C68 /* MVPSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVPSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +115,13 @@
 		E5AC7B5625922DFF00CB5C68 /* AddTask.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddTask.storyboard; sourceTree = "<group>"; };
 		E5AC7B5B2592324B00CB5C68 /* AddTaskPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskPresenter.swift; sourceTree = "<group>"; };
 		E5E959972593EE5500614323 /* AddTaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskModel.swift; sourceTree = "<group>"; };
+		E5E959A42595648400614323 /* EZUControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EZUControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5E959A62595648400614323 /* EZUControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EZUControl.h; sourceTree = "<group>"; };
+		E5E959A72595648400614323 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5E959AC2595648500614323 /* EZUControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EZUControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5E959B32595648500614323 /* EZUControlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZUControlTests.swift; sourceTree = "<group>"; };
+		E5E959B52595648500614323 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5E959C7259564AA00614323 /* EZUTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZUTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5AC7B11258EADDB00CB5C68 /* MBProgressHUD in Frameworks */,
+				E5E959B92595648500614323 /* EZUControl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +148,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E5E959A12595648400614323 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5E959A92595648500614323 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5E959AD2595648500614323 /* EZUControl.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -108,6 +172,8 @@
 				E5AC7AA5258D951600CB5C68 /* MVPSample */,
 				E5AC7ABC258D951700CB5C68 /* MVPSampleTests */,
 				E5AC7AC7258D951700CB5C68 /* MVPSampleUITests */,
+				E5E959A52595648400614323 /* EZUControl */,
+				E5E959B22595648500614323 /* EZUControlTests */,
 				E5AC7AA4258D951600CB5C68 /* Products */,
 				E5AC7B2D258ED13600CB5C68 /* Frameworks */,
 			);
@@ -119,6 +185,8 @@
 				E5AC7AA3258D951600CB5C68 /* MVPSample.app */,
 				E5AC7AB9258D951700CB5C68 /* MVPSampleTests.xctest */,
 				E5AC7AC4258D951700CB5C68 /* MVPSampleUITests.xctest */,
+				E5E959A42595648400614323 /* EZUControl.framework */,
+				E5E959AC2595648500614323 /* EZUControlTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -222,7 +290,45 @@
 			path = AddTask;
 			sourceTree = "<group>";
 		};
+		E5E959A52595648400614323 /* EZUControl */ = {
+			isa = PBXGroup;
+			children = (
+				E5E959C62595648E00614323 /* Classes */,
+				E5E959A62595648400614323 /* EZUControl.h */,
+				E5E959A72595648400614323 /* Info.plist */,
+			);
+			path = EZUControl;
+			sourceTree = "<group>";
+		};
+		E5E959B22595648500614323 /* EZUControlTests */ = {
+			isa = PBXGroup;
+			children = (
+				E5E959B32595648500614323 /* EZUControlTests.swift */,
+				E5E959B52595648500614323 /* Info.plist */,
+			);
+			path = EZUControlTests;
+			sourceTree = "<group>";
+		};
+		E5E959C62595648E00614323 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E5E959C7259564AA00614323 /* EZUTextField.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E5E9599F2595648400614323 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5E959B62595648500614323 /* EZUControl.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		E5AC7AA2258D951600CB5C68 /* MVPSample */ = {
@@ -232,10 +338,12 @@
 				E5AC7A9F258D951600CB5C68 /* Sources */,
 				E5AC7AA0258D951600CB5C68 /* Frameworks */,
 				E5AC7AA1258D951600CB5C68 /* Resources */,
+				E5E959BE2595648500614323 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E5E959B82595648500614323 /* PBXTargetDependency */,
 			);
 			name = MVPSample;
 			packageProductDependencies = (
@@ -283,6 +391,43 @@
 			productReference = E5AC7AC4258D951700CB5C68 /* MVPSampleUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		E5E959A32595648400614323 /* EZUControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5E959BB2595648500614323 /* Build configuration list for PBXNativeTarget "EZUControl" */;
+			buildPhases = (
+				E5E9599F2595648400614323 /* Headers */,
+				E5E959A02595648400614323 /* Sources */,
+				E5E959A12595648400614323 /* Frameworks */,
+				E5E959A22595648400614323 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EZUControl;
+			productName = EZUControl;
+			productReference = E5E959A42595648400614323 /* EZUControl.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E5E959AB2595648500614323 /* EZUControlTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5E959BF2595648500614323 /* Build configuration list for PBXNativeTarget "EZUControlTests" */;
+			buildPhases = (
+				E5E959A82595648500614323 /* Sources */,
+				E5E959A92595648500614323 /* Frameworks */,
+				E5E959AA2595648500614323 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E5E959AF2595648500614323 /* PBXTargetDependency */,
+				E5E959B12595648500614323 /* PBXTargetDependency */,
+			);
+			name = EZUControlTests;
+			productName = EZUControlTests;
+			productReference = E5E959AC2595648500614323 /* EZUControlTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -300,6 +445,14 @@
 						TestTargetID = E5AC7AA2258D951600CB5C68;
 					};
 					E5AC7AC3258D951700CB5C68 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = E5AC7AA2258D951600CB5C68;
+					};
+					E5E959A32595648400614323 = {
+						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
+					};
+					E5E959AB2595648500614323 = {
 						CreatedOnToolsVersion = 12.2;
 						TestTargetID = E5AC7AA2258D951600CB5C68;
 					};
@@ -324,6 +477,8 @@
 				E5AC7AA2258D951600CB5C68 /* MVPSample */,
 				E5AC7AB8258D951700CB5C68 /* MVPSampleTests */,
 				E5AC7AC3258D951700CB5C68 /* MVPSampleUITests */,
+				E5E959A32595648400614323 /* EZUControl */,
+				E5E959AB2595648500614323 /* EZUControlTests */,
 			);
 		};
 /* End PBXProject section */
@@ -349,6 +504,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E5AC7AC2258D951700CB5C68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5E959A22595648400614323 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5E959AA2595648500614323 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -394,6 +563,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E5E959A02595648400614323 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5E959C8259564AA00614323 /* EZUTextField.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5E959A82595648500614323 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5E959B42595648500614323 /* EZUControlTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -406,6 +591,21 @@
 			isa = PBXTargetDependency;
 			target = E5AC7AA2258D951600CB5C68 /* MVPSample */;
 			targetProxy = E5AC7AC5258D951700CB5C68 /* PBXContainerItemProxy */;
+		};
+		E5E959AF2595648500614323 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E5E959A32595648400614323 /* EZUControl */;
+			targetProxy = E5E959AE2595648500614323 /* PBXContainerItemProxy */;
+		};
+		E5E959B12595648500614323 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E5AC7AA2258D951600CB5C68 /* MVPSample */;
+			targetProxy = E5E959B02595648500614323 /* PBXContainerItemProxy */;
+		};
+		E5E959B82595648500614323 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E5E959A32595648400614323 /* EZUControl */;
+			targetProxy = E5E959B72595648500614323 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -548,6 +748,7 @@
 		E5AC7ACE258D951700CB5C68 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -566,6 +767,7 @@
 		E5AC7ACF258D951700CB5C68 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -661,6 +863,99 @@
 			};
 			name = Release;
 		};
+		E5E959BC2595648500614323 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = EZUControl/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.k28.sample.EZUControl;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E5E959BD2595648500614323 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = EZUControl/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.k28.sample.EZUControl;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E5E959C02595648500614323 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EZUControlTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.k28.sample.EZUControlTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVPSample.app/MVPSample";
+			};
+			name = Debug;
+		};
+		E5E959C12595648500614323 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EZUControlTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.k28.sample.EZUControlTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVPSample.app/MVPSample";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -696,6 +991,24 @@
 			buildConfigurations = (
 				E5AC7AD4258D951700CB5C68 /* Debug */,
 				E5AC7AD5258D951700CB5C68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5E959BB2595648500614323 /* Build configuration list for PBXNativeTarget "EZUControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5E959BC2595648500614323 /* Debug */,
+				E5E959BD2595648500614323 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5E959BF2595648500614323 /* Build configuration list for PBXNativeTarget "EZUControlTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5E959C02595648500614323 /* Debug */,
+				E5E959C12595648500614323 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
