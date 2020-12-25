@@ -2,7 +2,7 @@
 //  EZUControlTests.swift
 //  EZUControlTests
 //
-//  Created by kazuya on 2020/12/25.
+//  Created by K.Hatano on 2020/12/25.
 //
 
 import XCTest

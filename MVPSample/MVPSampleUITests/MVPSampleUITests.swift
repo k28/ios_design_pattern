@@ -2,7 +2,7 @@
 //  MVPSampleUITests.swift
 //  MVPSampleUITests
 //
-//  Created by kazuya on 2020/12/19.
+//  Created by K.Hatano on 2020/12/19.
 //
 
 import XCTest

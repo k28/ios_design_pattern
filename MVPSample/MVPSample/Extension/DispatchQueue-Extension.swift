@@ -2,7 +2,7 @@
 //  DispatchQueue-Extension.swift
 //  MVPSample
 //
-//  Created by kazuya on 2020/12/20.
+//  Created by K.Hatano on 2020/12/20.
 //
 
 import Foundation
