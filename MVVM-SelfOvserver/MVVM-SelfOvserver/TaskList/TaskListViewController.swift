@@ -11,17 +11,27 @@ class TaskListViewController: UIViewController {
     
     @IBOutlet weak var tableView_: UITableView!
     
+    // 追加ボタン
+    var addButton = UIBarButtonItem()
+    
     let CellIdentifier = "Cell"
     
     var taskListViewModel: TaskListViewModel!
     func inject(_ vm: TaskListViewModel) {
         taskListViewModel = vm
     }
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(onSelectAddButton(_:)))
+        self.navigationItem.rightBarButtonItem = addButton
+        
         setup()
+    }
+    
+    @objc func onSelectAddButton(_ sender: UIBarButtonItem) {
+        taskListViewModel.onSelectAdd()
     }
     
     fileprivate func setup() {
@@ -34,7 +44,8 @@ class TaskListViewController: UIViewController {
         super.viewWillAppear(animated)
         
         app.taskList.addObserver(self)
-        
+        taskListViewModel.addObserver(self)
+
         if app.taskList.numberOfTask() == 0 {
             // リストを更新する
             taskListViewModel.startSyncList()
@@ -47,6 +58,7 @@ class TaskListViewController: UIViewController {
         super.viewWillDisappear(animated)
         
         app.taskList.removeObserver(self)
+        taskListViewModel.removeObserver(self)
     }
     
 }
@@ -77,6 +89,7 @@ extension TaskListViewController: UITableViewDelegate {
         if let task = app.taskList.task(at: indexPath.row) {
             taskListViewModel.onSelectList(task)
         }
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
@@ -94,6 +107,19 @@ extension TaskListViewController: TaskListObserver {
     
     func onTaskListUpdate() {
         tableView_.reloadData()
+    }
+    
+}
+
+extension TaskListViewController: TaskListViewOutput {
+
+    func updateList() {
+        tableView_.reloadData()
+    }
+    
+    func showAddTaskList() {
+        //TODO: 画面遷移
+        NSLog("TaskList追加画面に遷移")
     }
     
 }

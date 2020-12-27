@@ -7,21 +7,42 @@
 
 import Foundation
 
-protocol TaskListViewInput {
+protocol TaskListViewInput: AnyObject {
     
+    func addObserver(_ obj: TaskListViewOutput)
+    func removeObserver(_ obj: TaskListViewOutput)
+    
+    /// Taskが選択された
     func onSelectList(_ task: Task)
+    /// TaskListの更新を開始する
     func startSyncList()
+    /// Taskの追加が選択された
+    func onSelectAdd()
     
 }
 
+/// オブザーバに対する通知
 protocol TaskListViewOutput: AnyObject {
     
     /// TaskListを更新する
     func updateList()
     
+    /// TaskList追加画面を表示する
+    func showAddTaskList()
+    
 }
 
 final class TaskListViewModel: TaskListViewInput {
+    var observers: [TaskListViewOutput] = []
+        
+    
+    func addObserver(_ obj: TaskListViewOutput) {
+        observers.append(obj)
+    }
+    
+    func removeObserver(_ obj: TaskListViewOutput) {
+        observers.removeAll { $0 === obj }
+    }
         
     /// Taskが選択された
     func onSelectList(_ task: Task) {
@@ -39,6 +60,10 @@ final class TaskListViewModel: TaskListViewInput {
                 break
             }
         })
+    }
+    
+    func onSelectAdd() {
+        observers.forEach { $0.showAddTaskList() }
     }
 
 }
