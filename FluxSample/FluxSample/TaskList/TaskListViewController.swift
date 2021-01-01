@@ -76,6 +76,7 @@ class TaskListViewController: UIViewController {
         
         _ = taskListViewStoreSubscription
         _ = reloadSubscription
+
         actionCreator.loadTaskList()
     }
     

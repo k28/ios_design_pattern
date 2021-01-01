@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,10 @@
 		E58B2AD2259DBD93002EF0BE /* AddTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E58B2AD1259DBD93002EF0BE /* AddTask.storyboard */; };
 		E58B2ADF259EB99D002EF0BE /* TaskListViewStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58B2ADE259EB99D002EF0BE /* TaskListViewStore.swift */; };
 		E58B2AE4259EC5AB002EF0BE /* AddTaskViewStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58B2AE3259EC5AB002EF0BE /* AddTaskViewStore.swift */; };
+		E58B2AE9259F03B4002EF0BE /* CommonActionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58B2AE8259F03B4002EF0BE /* CommonActionStore.swift */; };
+		E58B2AF2259F06A9002EF0BE /* DispatchQueue-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58B2AF1259F06A9002EF0BE /* DispatchQueue-Extension.swift */; };
+		E58B2AF8259F0762002EF0BE /* MBProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = E58B2AF7259F0762002EF0BE /* MBProgressHUD */; };
+		E5B0BEF2259F166200AD3B33 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B0BEF1259F166200AD3B33 /* App.swift */; };
 		E5F78B4A259A818300069DE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F78B49259A818300069DE8 /* AppDelegate.swift */; };
 		E5F78B4C259A818300069DE8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F78B4B259A818300069DE8 /* SceneDelegate.swift */; };
 		E5F78B53259A818400069DE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5F78B52259A818400069DE8 /* Assets.xcassets */; };
@@ -55,6 +59,9 @@
 		E58B2AD1259DBD93002EF0BE /* AddTask.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddTask.storyboard; sourceTree = "<group>"; };
 		E58B2ADE259EB99D002EF0BE /* TaskListViewStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewStore.swift; sourceTree = "<group>"; };
 		E58B2AE3259EC5AB002EF0BE /* AddTaskViewStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewStore.swift; sourceTree = "<group>"; };
+		E58B2AE8259F03B4002EF0BE /* CommonActionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonActionStore.swift; sourceTree = "<group>"; };
+		E58B2AF1259F06A9002EF0BE /* DispatchQueue-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DispatchQueue-Extension.swift"; path = "../../../MVPSample/MVPSample/Extension/DispatchQueue-Extension.swift"; sourceTree = "<group>"; };
+		E5B0BEF1259F166200AD3B33 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		E5F78B46259A818300069DE8 /* FluxSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FluxSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5F78B49259A818300069DE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5F78B4B259A818300069DE8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E58B2AF8259F0762002EF0BE /* MBProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +122,7 @@
 				E58B2AA9259D2D50002EF0BE /* TaskListStore.swift */,
 				E58B2ADE259EB99D002EF0BE /* TaskListViewStore.swift */,
 				E58B2AE3259EC5AB002EF0BE /* AddTaskViewStore.swift */,
+				E58B2AE8259F03B4002EF0BE /* CommonActionStore.swift */,
 			);
 			path = Stores;
 			sourceTree = "<group>";
@@ -133,6 +142,14 @@
 				E58B2AD1259DBD93002EF0BE /* AddTask.storyboard */,
 			);
 			path = AddTask;
+			sourceTree = "<group>";
+		};
+		E58B2AF0259F068D002EF0BE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E58B2AF1259F06A9002EF0BE /* DispatchQueue-Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		E5F78B3D259A818300069DE8 = {
@@ -158,12 +175,14 @@
 		E5F78B48259A818300069DE8 /* FluxSample */ = {
 			isa = PBXGroup;
 			children = (
+				E58B2AF0259F068D002EF0BE /* Extension */,
 				E58B2AB1259D2DF8002EF0BE /* Model */,
 				E58B2A94259D2410002EF0BE /* Flux */,
 				E5F78B7C259A819300069DE8 /* TaskList */,
 				E58B2AC8259DBD2B002EF0BE /* AddTask */,
 				E5F78B49259A818300069DE8 /* AppDelegate.swift */,
 				E5F78B4B259A818300069DE8 /* SceneDelegate.swift */,
+				E5B0BEF1259F166200AD3B33 /* App.swift */,
 				E5F78B52259A818400069DE8 /* Assets.xcassets */,
 				E5F78B54259A818400069DE8 /* LaunchScreen.storyboard */,
 				E5F78B57259A818400069DE8 /* Info.plist */,
@@ -214,6 +233,9 @@
 			dependencies = (
 			);
 			name = FluxSample;
+			packageProductDependencies = (
+				E58B2AF7259F0762002EF0BE /* MBProgressHUD */,
+			);
 			productName = FluxSample;
 			productReference = E5F78B46259A818300069DE8 /* FluxSample.app */;
 			productType = "com.apple.product-type.application";
@@ -285,6 +307,9 @@
 				Base,
 			);
 			mainGroup = E5F78B3D259A818300069DE8;
+			packageReferences = (
+				E58B2AF6259F0762002EF0BE /* XCRemoteSwiftPackageReference "MBProgressHUD" */,
+			);
 			productRefGroup = E5F78B47259A818300069DE8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -332,6 +357,7 @@
 				E58B2AB3259D2E0C002EF0BE /* Task.swift in Sources */,
 				E5F78B7E259A81AA00069DE8 /* TaskListViewController.swift in Sources */,
 				E58B2ADF259EB99D002EF0BE /* TaskListViewStore.swift in Sources */,
+				E5B0BEF2259F166200AD3B33 /* App.swift in Sources */,
 				E58B2A96259D241F002EF0BE /* Action.swift in Sources */,
 				E58B2AC1259D2F75002EF0BE /* ActionCreator.swift in Sources */,
 				E58B2AE4259EC5AB002EF0BE /* AddTaskViewStore.swift in Sources */,
@@ -339,8 +365,10 @@
 				E58B2AA3259D2756002EF0BE /* Store.swift in Sources */,
 				E5F78B4C259A818300069DE8 /* SceneDelegate.swift in Sources */,
 				E58B2A9E259D255E002EF0BE /* Dispatcher.swift in Sources */,
+				E58B2AE9259F03B4002EF0BE /* CommonActionStore.swift in Sources */,
 				E58B2AAA259D2D50002EF0BE /* TaskListStore.swift in Sources */,
 				E58B2ACA259DBD80002EF0BE /* AddTaskViewController.swift in Sources */,
+				E58B2AF2259F06A9002EF0BE /* DispatchQueue-Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,6 +693,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E58B2AF6259F0762002EF0BE /* XCRemoteSwiftPackageReference "MBProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jdg/MBProgressHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E58B2AF7259F0762002EF0BE /* MBProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E58B2AF6259F0762002EF0BE /* XCRemoteSwiftPackageReference "MBProgressHUD" */;
+			productName = MBProgressHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E5F78B3E259A818300069DE8 /* Project object */;
 }

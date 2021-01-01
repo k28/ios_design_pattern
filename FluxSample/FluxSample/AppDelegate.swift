@@ -6,19 +6,41 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var commonActionStore: CommonActionStore?
+    private lazy var commonActionStoreSubscription: Subscription? = {
+        return commonActionStore?.addListener { [weak self] in
+            switch self?.commonActionStore?.taskType {
+            case .showDialog(let title):
+                if let view = app.window.rootViewController?.view {
+                    let hud = MBProgressHUD.showAdded(to: view, animated: true)
+                    hud.label.text = title
+                }
+                break
+            case .closeDialog:
+                MBProgressHUD.forView(app.window.rootViewController?.view ?? UIView())?.hide(animated: true)
+                break
+            case .none:
+                break
+            }
+        }
+    }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
+        commonActionStore = CommonActionStore(dispatcher: .shared)
+        _ = commonActionStoreSubscription
 
         if #available(iOS 13.0, *) {
             // SenceDelegateで行う
         } else {
             window = UIWindow(frame: UIScreen.main.bounds)
+            app.window = window
             AppDelegate.setupWindow(window)
         }
 

@@ -19,6 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         window = UIWindow(windowScene: windowScene)
+        app.window = window
         AppDelegate.setupWindow(window)
     }
 
@@ -52,4 +53,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
 }
+
+let app = App()
 

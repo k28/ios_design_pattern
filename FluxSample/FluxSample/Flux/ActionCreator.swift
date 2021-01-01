@@ -15,10 +15,16 @@ final class ActionCreator {
     }
     
     func loadTaskList() {
+        DispatchQueue.mainSyncSafe { [dispatcher] in
+            dispatcher.dispatch(.commonAction(.showDialog("データ取得中...")))
+        }
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: { [dispatcher] in
             dispatcher.dispatch(.addTask(Task.make("fiest",  Date(timeIntervalSinceNow: 300))))
             dispatcher.dispatch(.addTask(Task.make("second", Date(timeIntervalSinceNow: 600))))
             dispatcher.dispatch(.addTask(Task.make("therd",  Date(timeIntervalSinceNow: 900))))
+
+            dispatcher.dispatch(.commonAction(.closeDialog))
         })
     }
     

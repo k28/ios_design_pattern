@@ -13,10 +13,7 @@ enum Action {
     case removeTask(Task)
     
     /// タスクの詳細を表示する(追加/編集時)
+    case commonAction(CommonActionType)
     case taskListViewRoute(TaskListViewRouteType)
     case addTaskViewAction(AddTaskViewStoreAction)
-    
-    /// インジケータを出す
-    case showIndicator(String?)
-    case closeIndicator
 }
