@@ -16,6 +16,7 @@ final class TaskListStore: Store {
     override func onDispatch(_ action: Action) {
         switch action {
         case .addTask(let task):
+            if taskList.contains(task) { return }
             taskList.append(task)
         case .removeTask(let task):
             taskList.removeAll { $0 == task }

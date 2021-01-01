@@ -25,4 +25,12 @@ final class ActionCreator {
     func addTask(_ task: Task) {
         dispatcher.dispatch(.addTask(task))
     }
+    
+    func taskListViewRoute(_ type: TaskListViewRouteType) {
+        dispatcher.dispatch(.taskListViewRoute(type))
+    }
+    
+    func addTaskViewAction(_ actionType: AddTaskViewStoreAction) {
+        dispatcher.dispatch(.addTaskViewAction(actionType))
+    }
 }

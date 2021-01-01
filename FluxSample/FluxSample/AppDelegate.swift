@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         guard let window = window else { return }
         
         let taskListViewController = UIStoryboard(name: "TaskList", bundle: nil).instantiateInitialViewController() as! TaskListViewController
-        taskListViewController.inject(taskListStore: .shared, actionCreator: .init())
+        taskListViewController.inject(taskListViewStore: .init(dispatcher: .shared), taskListStore: .shared, actionCreator: .init())
         let navigationController = UINavigationController(rootViewController: taskListViewController)
                 
         window.rootViewController = navigationController
