@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// タスク1つを表す
 struct Task : Equatable {
     var title: String = ""
     var deadline: Date = Date()

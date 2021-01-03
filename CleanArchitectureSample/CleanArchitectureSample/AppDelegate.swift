@@ -28,10 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     class func setupWindow(_ window: UIWindow?) {
         guard let window = window else { return }
         
-        let taskListViewController = UIStoryboard(name: "TaskList", bundle: nil).instantiateInitialViewController() as! TaskListViewController
-        let navigationController = UINavigationController(rootViewController: taskListViewController)
-                
-        window.rootViewController = navigationController
+        App.shared.configure(with: window)
+        
         window.makeKeyAndVisible()
         
      }
