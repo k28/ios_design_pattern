@@ -10,6 +10,8 @@ import UIKit
 class TaskListViewController: UIViewController {
     
     @IBOutlet weak var tableView_: UITableView!
+    var addButton = UIBarButtonItem()
+    
     let CellIdentifier = "CellIdentifier"
     var taskList: [TaskData] = []
     
@@ -30,6 +32,19 @@ class TaskListViewController: UIViewController {
     private func setup() {
         tableView_.register(UITableViewCell.self, forCellReuseIdentifier: CellIdentifier)
         tableView_.dataSource = self
+        
+        addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(onSelectAddButton(_:)))
+        self.navigationItem.rightBarButtonItem = addButton
+    }
+    
+}
+
+extension TaskListViewController {
+    
+    @objc func onSelectAddButton(_ sender: UIBarButtonItem) {
+        let vc = UIStoryboard(name: "AddTask", bundle: nil).instantiateInitialViewController() as! AddTaskViewController
+        App.shared.configure(with: vc)  // 依存関係を構築
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }

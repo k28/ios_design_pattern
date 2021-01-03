@@ -13,6 +13,7 @@ class App {
     private init() {}
     
     private(set) var useCase: TaskListUseCase!
+    private(set) var addTaskUseCase: AddTaskUseCase!
     
     func configure(with window: UIWindow) {
         buildLayer()
@@ -26,7 +27,12 @@ class App {
         let navigationController = UINavigationController(rootViewController: taskListViewController)
         
         window.rootViewController = navigationController
-
+    }
+    
+    func configure(with vc: AddTaskViewController) {
+        let presenter = AddTaskPresenter(addTaskUseCase)
+        vc.presenter = presenter
+        presenter.output = vc
     }
     
     private func buildLayer() {
@@ -35,9 +41,12 @@ class App {
         let taskListGateway = TaskListGateway()
         
         // Use Case
-        useCase = TaskListUseCase(gateway: taskListGateway)
+        useCase = TaskListUseCase()
+        addTaskUseCase = AddTaskUseCase()
         
-        // Use Caseとバインド(今回はTaskListの初期化時に設定しているので不要)
+        // Use Caseとバインド
+        useCase.gateway = taskListGateway
+        addTaskUseCase.gateway = taskListGateway
         
         // Framework & Drivers
         // 今回のサンプルではGatewayが時間さで取得しているので不要

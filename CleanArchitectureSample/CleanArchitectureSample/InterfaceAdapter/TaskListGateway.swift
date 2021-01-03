@@ -18,6 +18,9 @@ protocol TaskListGatewayProtocol {
     /// TaskListの取得を開始する
     /// - Parameter completion: 処理終了時にCallされる
     func fetch(completion: @escaping (Result<[Task], TaskListGatewayError>) -> Void)
+    
+    /// Taskを追加する
+    func addTask(newTask: Task, completion: @escaping (Result<Task, TaskListGatewayError>) -> Void)
 }
 
 /// TaskList
@@ -34,5 +37,11 @@ final class TaskListGateway: TaskListGatewayProtocol {
             completion(.success(taskList))
         }
     }
+
+    func addTask(newTask: Task, completion: @escaping (Result<Task, TaskListGatewayError>) -> Void) {
+        // Taskを追加する
+        completion(.success(newTask))
+    }
     
+
 }

@@ -30,14 +30,8 @@ protocol TaskListUseCaseOutput {
 final class TaskListUseCase: TaskListUseCaseProtocol {
 
     var output: TaskListUseCaseOutput!
-    
-    let gateway: TaskListGateway
-    
-    init(gateway: TaskListGateway) {
+    var gateway: TaskListGateway!
         
-        self.gateway = gateway
-    }
-    
     /// TaskListの取得を開始する
     func startFetch() {
         
