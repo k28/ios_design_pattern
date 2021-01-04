@@ -7,9 +7,9 @@
 
 import Foundation
 
-protocol AddTaskPresenterProtocol {
+protocol AddTaskPresenterProtocol: AnyObject {
 
-    func onViewDidLoad()
+    func onViewDidAppear()
     func onAddTaskButton()
     func onTitleChanged(_ title: String)
     func onDeadlineChanged(_ deadline: Date)
@@ -29,14 +29,23 @@ struct AddTaskViewData {
 
 final class AddTaskPresenter {
     
-    private weak var useCase: AddTaskUseCaseProtocol?
+    private weak var useCase: TaskListUseCaseProtocol!
     var output: AddTaskPresenterOutput!
-    
     var task: Task = Task()
     
-    init(_ useCase: AddTaskUseCaseProtocol) {
+    private lazy var subscription: Subscription = {
+        return useCase.addListener {
+            // TaskListが更新された時の動作(あれば)
+        }
+    }()
+    
+    init(_ useCase: TaskListUseCaseProtocol) {
         self.useCase = useCase
-        useCase.output = self
+        _ = subscription
+    }
+    
+    deinit {
+        useCase.removeListener(subscription)
     }
     
     fileprivate func updateView() {
@@ -52,12 +61,13 @@ final class AddTaskPresenter {
 }
 
 extension AddTaskPresenter: AddTaskPresenterProtocol {
-    func onViewDidLoad() {
+    
+    func onViewDidAppear() {
         updateView()
     }
     
     func onAddTaskButton() {
-        useCase?.addTask(task)
+        useCase.addTask(task: task)
     }
 
     func onTitleChanged(_ title: String) {
@@ -69,16 +79,5 @@ extension AddTaskPresenter: AddTaskPresenterProtocol {
         task.deadline = deadline
         updateView()
     }
-    
-}
-
-extension AddTaskPresenter: AddTaskUseCaseOutput {
-    
-    func taskDidAdd() {
-    }
-    
-    func addTaskDidError(_ error: Error) {
-    }
-    
     
 }

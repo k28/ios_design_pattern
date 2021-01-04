@@ -12,8 +12,8 @@ class App {
     static let shared = App()
     private init() {}
     
+    private(set) var taskList: TaskList!
     private(set) var useCase: TaskListUseCase!
-    private(set) var addTaskUseCase: AddTaskUseCase!
     
     func configure(with window: UIWindow) {
         buildLayer()
@@ -30,23 +30,25 @@ class App {
     }
     
     func configure(with vc: AddTaskViewController) {
-        let presenter = AddTaskPresenter(addTaskUseCase)
+        let presenter = AddTaskPresenter(useCase)
         vc.presenter = presenter
         presenter.output = vc
     }
     
     private func buildLayer() {
         
+        // Entities
+        taskList = TaskList([])
+        
         // Gateway
         let taskListGateway = TaskListGateway()
         
         // Use Case
         useCase = TaskListUseCase()
-        addTaskUseCase = AddTaskUseCase()
         
         // Use Caseとバインド
         useCase.gateway = taskListGateway
-        addTaskUseCase.gateway = taskListGateway
+        useCase.taskList = taskList
         
         // Framework & Drivers
         // 今回のサンプルではGatewayが時間さで取得しているので不要

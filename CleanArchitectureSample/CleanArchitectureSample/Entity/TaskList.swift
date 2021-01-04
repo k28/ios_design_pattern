@@ -8,7 +8,7 @@
 import Foundation
 
 /// TaskListを管理する
-struct TaskList {
+class TaskList {
     
     var taskList: [Task]
     
@@ -16,7 +16,7 @@ struct TaskList {
         self.taskList = list
     }
     
-    mutating func addTask(_ task: Task) {
+    func addTask(_ task: Task) {
         taskList.append(task)
     }
     

@@ -10,6 +10,8 @@ import Foundation
 protocol TaskListPresenterProtocol: AnyObject {
     /// TaskListを取得する
     func startFetch()
+    
+    func onViewDidAppear()
 }
 
 protocol TaskListPresenterOutput {
@@ -26,26 +28,42 @@ struct TaskData {
 
 /// 画面の入力を受け取る
 final class TaskListPresenter: TaskListPresenterProtocol {
-    
     private weak var useCase: TaskListUseCaseProtocol!
     var output: TaskListPresenterOutput?
+    
+    private lazy var subscription: Subscription = {
+        return useCase.addListener { [weak self] in
+            self?.notifyUpdate()
+        }
+    }()
     
     init(useCase: TaskListUseCaseProtocol) {
         self.useCase = useCase
         self.useCase.output = self
+        _ = subscription
+    }
+    
+    deinit {
+        useCase.removeListener(subscription)
     }
 
     func startFetch() {
         useCase.startFetch()
     }
 
+    func onViewDidAppear() {
+    }
+    
+    private func notifyUpdate() {
+        let taskDataList = useCase.taskList.taskList.map { TaskData(title: $0.title, deadline: $0.deadline) }
+        output?.update(taskDataList)
+    }
 }
 
 extension TaskListPresenter: TaskListUseCaseOutput {
     
-    func taskListDidUpdate(_ taskList: [Task]) {
-        let taskDataList = taskList.map { TaskData(title: $0.title, deadline: $0.deadline) }
-        output?.update(taskDataList)
+    func taskListDidUpdate(_ taskList: TaskList) {
+        notifyUpdate()
     }
     
     func taskListDidError(_ error: Error) {

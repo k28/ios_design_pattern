@@ -24,7 +24,6 @@
 		E5B0BF6E25A06CDE00AD3B33 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B0BF6D25A06CDE00AD3B33 /* App.swift */; };
 		E5B0BF7725A152E800AD3B33 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B0BF7625A152E800AD3B33 /* AddTaskViewController.swift */; };
 		E5B0BF7F25A1530400AD3B33 /* AddTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5B0BF7E25A1530400AD3B33 /* AddTask.storyboard */; };
-		E5B0BF8425A154D300AD3B33 /* AddTaskUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B0BF8325A154D300AD3B33 /* AddTaskUseCase.swift */; };
 		E5B0BF8925A154E600AD3B33 /* AddTaskPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B0BF8825A154E600AD3B33 /* AddTaskPresenter.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,7 +68,6 @@
 		E5B0BF6D25A06CDE00AD3B33 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		E5B0BF7625A152E800AD3B33 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		E5B0BF7E25A1530400AD3B33 /* AddTask.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddTask.storyboard; sourceTree = "<group>"; };
-		E5B0BF8325A154D300AD3B33 /* AddTaskUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskUseCase.swift; sourceTree = "<group>"; };
 		E5B0BF8825A154E600AD3B33 /* AddTaskPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -178,7 +176,6 @@
 			isa = PBXGroup;
 			children = (
 				E5B0BF5225A05EDE00AD3B33 /* TaskListUseCase.swift */,
-				E5B0BF8325A154D300AD3B33 /* AddTaskUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -332,7 +329,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5B0BF8425A154D300AD3B33 /* AddTaskUseCase.swift in Sources */,
 				E5B0BF4D25A05E2800AD3B33 /* TaskList.swift in Sources */,
 				E5B0BF5C25A060CE00AD3B33 /* TaskListGateway.swift in Sources */,
 				E5B0BF6425A0658F00AD3B33 /* TaskListPresenter.swift in Sources */,

@@ -19,7 +19,11 @@ class AddTaskViewController: UIViewController {
         super.viewDidLoad()
 
         setup()
-        presenter.onViewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        presenter.onViewDidAppear()
     }
     
     private func setup() {

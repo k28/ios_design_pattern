@@ -15,7 +15,7 @@ class TaskListViewController: UIViewController {
     let CellIdentifier = "CellIdentifier"
     var taskList: [TaskData] = []
     
-    private weak var presenter: TaskListPresenterProtocol!
+    private var presenter: TaskListPresenterProtocol!
     func injdect(_ presenter: TaskListPresenterProtocol) {
         self.presenter = presenter
     }
