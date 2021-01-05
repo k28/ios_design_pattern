@@ -11,6 +11,7 @@ final class TaskListViewCordinator: Cordinator {
 
     private let navigationController: UINavigationController
     private var viewController: TaskListViewController?
+    private var taskDetailCordinator: TaskDetailViewCordinator?
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -33,7 +34,9 @@ extension TaskListViewCordinator: TaskListViewControllerDelegate {
     }
     
     func taskListViewControllerDidSelectItem(_ task: Task) {
-        // TODO: 詳細画面に遷移
+        let taskDetailCordinator = TaskDetailViewCordinator(navigationController: navigationController, task: task)
+        taskDetailCordinator.start()
+        self.taskDetailCordinator = taskDetailCordinator
     }
     
     
