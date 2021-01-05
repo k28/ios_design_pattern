@@ -32,7 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = UINavigationController(rootViewController: taskListViewController)
         
         let model = TaskListModel()
-        let presenter = TaskListPresenter(view: taskListViewController, model: model)
+        let router = TaskListRouter(taskListViewController)
+        let presenter = TaskListPresenter(view: taskListViewController, model: model, router: router)
         taskListViewController.inject(presenter)
         
         window.rootViewController = navigationController

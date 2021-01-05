@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E523914C25A508DE0005FF9F /* Transitioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E523914B25A508DE0005FF9F /* Transitioner.swift */; };
+		E523915625A50AE10005FF9F /* TaskListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E523915525A50AE10005FF9F /* TaskListRouter.swift */; };
 		E5AC7AA7258D951600CB5C68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AC7AA6258D951600CB5C68 /* AppDelegate.swift */; };
 		E5AC7AA9258D951600CB5C68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AC7AA8258D951600CB5C68 /* SceneDelegate.swift */; };
 		E5AC7AAB258D951600CB5C68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AC7AAA258D951600CB5C68 /* ViewController.swift */; };
@@ -92,6 +94,8 @@
 
 /* Begin PBXFileReference section */
 		E523913125A507A10005FF9F /* MVPSample copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MVPSample copy-Info.plist"; path = "/Users/kazuya/Develop/swift/ios_design_pattern/MVPSample/MVPSample copy-Info.plist"; sourceTree = "<absolute>"; };
+		E523914B25A508DE0005FF9F /* Transitioner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transitioner.swift; sourceTree = "<group>"; };
+		E523915525A50AE10005FF9F /* TaskListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListRouter.swift; sourceTree = "<group>"; };
 		E5AC7AA3258D951600CB5C68 /* MVP-RouterSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVP-RouterSample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5AC7AA6258D951600CB5C68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5AC7AA8258D951600CB5C68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +175,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E523914A25A508C00005FF9F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E523914B25A508DE0005FF9F /* Transitioner.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		E5AC7A9A258D951600CB5C68 = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +212,7 @@
 		E5AC7AA5258D951600CB5C68 /* MVPSample */ = {
 			isa = PBXGroup;
 			children = (
+				E523914A25A508C00005FF9F /* Router */,
 				E5AC7B1E258EB1C700CB5C68 /* Extension */,
 				E5AC7B15258EAF8300CB5C68 /* Common */,
 				E5AC7AFC258D97F200CB5C68 /* Model */,
@@ -242,6 +255,7 @@
 				E5AC7AEF258D976E00CB5C68 /* TaskListModel.swift */,
 				E5AC7AF7258D978A00CB5C68 /* TaskListPresenter.swift */,
 				E5AC7AE5258D95BC00CB5C68 /* TaskListViewController.swift */,
+				E523915525A50AE10005FF9F /* TaskListRouter.swift */,
 			);
 			path = TaskList;
 			sourceTree = "<group>";
@@ -557,7 +571,9 @@
 				E5E959982593EE5500614323 /* AddTaskModel.swift in Sources */,
 				E5AC7B4F25922DEB00CB5C68 /* AddTaskViewController.swift in Sources */,
 				E5AC7AA9258D951600CB5C68 /* SceneDelegate.swift in Sources */,
+				E523915625A50AE10005FF9F /* TaskListRouter.swift in Sources */,
 				E5AC7AFE258D97FE00CB5C68 /* Task.swift in Sources */,
+				E523914C25A508DE0005FF9F /* Transitioner.swift in Sources */,
 				E5AC7B06258D99A400CB5C68 /* Result.swift in Sources */,
 				E5AC7AF8258D978A00CB5C68 /* TaskListPresenter.swift in Sources */,
 			);

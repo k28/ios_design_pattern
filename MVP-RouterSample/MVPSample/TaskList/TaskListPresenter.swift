@@ -17,15 +17,15 @@ protocol TaskListPresenterInput {
 }
 
 /// TaskListの変更通知
-protocol TaskListPresenterOutput: AnyObject {
+protocol TaskListPresenterOutput: Transitioner {    /* Presenterの出力用のプロトコルをTransitionerに準拠させる */
     func updateTasks(_ tasks: [Task])
-    func transitionToTaskDetail(_ task: Task)
-    func transitionToAddNewTask()
     
     // ダイアログを出す, 消す, エラー表示する
     func showDialog(_ message: String)
     func closeDialog()
 }
+
+//protocol TaskListViewProtocol: Transitioner {}
 
 final class TaskListPresenter: TaskListPresenterInput {
     
@@ -33,10 +33,12 @@ final class TaskListPresenter: TaskListPresenterInput {
     
     private weak var view: TaskListPresenterOutput!
     private var model: TaskListModelInput
+    private var router: TaskListRouterProtocol
 
-    init(view: TaskListPresenterOutput, model: TaskListModelInput) {
+    init(view: TaskListPresenterOutput, model: TaskListModelInput, router: TaskListRouterProtocol) {
         self.view = view
         self.model = model
+        self.router = router
     }
     
     var numberOfTask: Int {
@@ -51,11 +53,11 @@ final class TaskListPresenter: TaskListPresenterInput {
     func didSelectRow(at indexPath: IndexPath) {
         guard let task = task(forRow: indexPath.row) else { return }
         
-        view.transitionToTaskDetail(task)
+        router.transitionToTaskDetail(task)
     }
     
     func onSelectAddNewTask() {
-        view.transitionToAddNewTask()
+        router.transitionToAddNewTask()
     }
     
     func onSetupDidFinish() {
