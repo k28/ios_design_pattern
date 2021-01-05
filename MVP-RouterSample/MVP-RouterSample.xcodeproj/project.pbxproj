@@ -92,7 +92,7 @@
 
 /* Begin PBXFileReference section */
 		E523913125A507A10005FF9F /* MVPSample copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MVPSample copy-Info.plist"; path = "/Users/kazuya/Develop/swift/ios_design_pattern/MVPSample/MVPSample copy-Info.plist"; sourceTree = "<absolute>"; };
-		E5AC7AA3258D951600CB5C68 /* MVPSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVPSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5AC7AA3258D951600CB5C68 /* MVP-RouterSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVP-RouterSample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5AC7AA6258D951600CB5C68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5AC7AA8258D951600CB5C68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E5AC7AAA258D951600CB5C68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,9 +100,9 @@
 		E5AC7AAF258D951700CB5C68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5AC7AB2258D951700CB5C68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5AC7AB4258D951700CB5C68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E5AC7AB9258D951700CB5C68 /* MVPSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVPSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5AC7AB9258D951700CB5C68 /* MVP-RouterSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVP-RouterSampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5AC7ABF258D951700CB5C68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E5AC7AC4258D951700CB5C68 /* MVPSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVPSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5AC7AC4258D951700CB5C68 /* MVP-RouterSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVP-RouterSampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5AC7AC8258D951700CB5C68 /* MVPSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPSampleUITests.swift; sourceTree = "<group>"; };
 		E5AC7ACA258D951700CB5C68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5AC7AE5258D95BC00CB5C68 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
@@ -188,9 +188,9 @@
 		E5AC7AA4258D951600CB5C68 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E5AC7AA3258D951600CB5C68 /* MVPSample.app */,
-				E5AC7AB9258D951700CB5C68 /* MVPSampleTests.xctest */,
-				E5AC7AC4258D951700CB5C68 /* MVPSampleUITests.xctest */,
+				E5AC7AA3258D951600CB5C68 /* MVP-RouterSample.app */,
+				E5AC7AB9258D951700CB5C68 /* MVP-RouterSampleTests.xctest */,
+				E5AC7AC4258D951700CB5C68 /* MVP-RouterSampleUITests.xctest */,
 				E5E959A42595648400614323 /* EZUControl.framework */,
 				E5E959AC2595648500614323 /* EZUControlTests.xctest */,
 			);
@@ -347,9 +347,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		E5AC7AA2258D951600CB5C68 /* MVPSample */ = {
+		E5AC7AA2258D951600CB5C68 /* MVP-RouterSample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E5AC7ACD258D951700CB5C68 /* Build configuration list for PBXNativeTarget "MVPSample" */;
+			buildConfigurationList = E5AC7ACD258D951700CB5C68 /* Build configuration list for PBXNativeTarget "MVP-RouterSample" */;
 			buildPhases = (
 				E5AC7A9F258D951600CB5C68 /* Sources */,
 				E5AC7AA0258D951600CB5C68 /* Frameworks */,
@@ -361,17 +361,17 @@
 			dependencies = (
 				E5E959B82595648500614323 /* PBXTargetDependency */,
 			);
-			name = MVPSample;
+			name = "MVP-RouterSample";
 			packageProductDependencies = (
 				E5AC7B10258EADDB00CB5C68 /* MBProgressHUD */,
 			);
 			productName = MVPSample;
-			productReference = E5AC7AA3258D951600CB5C68 /* MVPSample.app */;
+			productReference = E5AC7AA3258D951600CB5C68 /* MVP-RouterSample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E5AC7AB8258D951700CB5C68 /* MVPSampleTests */ = {
+		E5AC7AB8258D951700CB5C68 /* MVP-RouterSampleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E5AC7AD0258D951700CB5C68 /* Build configuration list for PBXNativeTarget "MVPSampleTests" */;
+			buildConfigurationList = E5AC7AD0258D951700CB5C68 /* Build configuration list for PBXNativeTarget "MVP-RouterSampleTests" */;
 			buildPhases = (
 				E5AC7AB5258D951700CB5C68 /* Sources */,
 				E5AC7AB6258D951700CB5C68 /* Frameworks */,
@@ -382,16 +382,16 @@
 			dependencies = (
 				E5AC7ABB258D951700CB5C68 /* PBXTargetDependency */,
 			);
-			name = MVPSampleTests;
+			name = "MVP-RouterSampleTests";
 			packageProductDependencies = (
 			);
 			productName = MVPSampleTests;
-			productReference = E5AC7AB9258D951700CB5C68 /* MVPSampleTests.xctest */;
+			productReference = E5AC7AB9258D951700CB5C68 /* MVP-RouterSampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E5AC7AC3258D951700CB5C68 /* MVPSampleUITests */ = {
+		E5AC7AC3258D951700CB5C68 /* MVP-RouterSampleUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E5AC7AD3258D951700CB5C68 /* Build configuration list for PBXNativeTarget "MVPSampleUITests" */;
+			buildConfigurationList = E5AC7AD3258D951700CB5C68 /* Build configuration list for PBXNativeTarget "MVP-RouterSampleUITests" */;
 			buildPhases = (
 				E5AC7AC0258D951700CB5C68 /* Sources */,
 				E5AC7AC1258D951700CB5C68 /* Frameworks */,
@@ -402,9 +402,9 @@
 			dependencies = (
 				E5AC7AC6258D951700CB5C68 /* PBXTargetDependency */,
 			);
-			name = MVPSampleUITests;
+			name = "MVP-RouterSampleUITests";
 			productName = MVPSampleUITests;
-			productReference = E5AC7AC4258D951700CB5C68 /* MVPSampleUITests.xctest */;
+			productReference = E5AC7AC4258D951700CB5C68 /* MVP-RouterSampleUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		E5E959A32595648400614323 /* EZUControl */ = {
@@ -474,7 +474,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E5AC7A9E258D951600CB5C68 /* Build configuration list for PBXProject "MVPSample" */;
+			buildConfigurationList = E5AC7A9E258D951600CB5C68 /* Build configuration list for PBXProject "MVP-RouterSample" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -490,9 +490,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E5AC7AA2258D951600CB5C68 /* MVPSample */,
-				E5AC7AB8258D951700CB5C68 /* MVPSampleTests */,
-				E5AC7AC3258D951700CB5C68 /* MVPSampleUITests */,
+				E5AC7AA2258D951600CB5C68 /* MVP-RouterSample */,
+				E5AC7AB8258D951700CB5C68 /* MVP-RouterSampleTests */,
+				E5AC7AC3258D951700CB5C68 /* MVP-RouterSampleUITests */,
 				E5E959A32595648400614323 /* EZUControl */,
 				E5E959AB2595648500614323 /* EZUControlTests */,
 			);
@@ -602,12 +602,12 @@
 /* Begin PBXTargetDependency section */
 		E5AC7ABB258D951700CB5C68 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E5AC7AA2258D951600CB5C68 /* MVPSample */;
+			target = E5AC7AA2258D951600CB5C68 /* MVP-RouterSample */;
 			targetProxy = E5AC7ABA258D951700CB5C68 /* PBXContainerItemProxy */;
 		};
 		E5AC7AC6258D951700CB5C68 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E5AC7AA2258D951600CB5C68 /* MVPSample */;
+			target = E5AC7AA2258D951600CB5C68 /* MVP-RouterSample */;
 			targetProxy = E5AC7AC5258D951700CB5C68 /* PBXContainerItemProxy */;
 		};
 		E5E959AF2595648500614323 /* PBXTargetDependency */ = {
@@ -617,7 +617,7 @@
 		};
 		E5E959B12595648500614323 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E5AC7AA2258D951600CB5C68 /* MVPSample */;
+			target = E5AC7AA2258D951600CB5C68 /* MVP-RouterSample */;
 			targetProxy = E5E959B02595648500614323 /* PBXContainerItemProxy */;
 		};
 		E5E959B82595648500614323 /* PBXTargetDependency */ = {
@@ -818,7 +818,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVPSample.app/MVPSample";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVP-RouterSample.app/MVP-RouterSample";
 			};
 			name = Debug;
 		};
@@ -839,7 +839,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVPSample.app/MVPSample";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVP-RouterSample.app/MVP-RouterSample";
 			};
 			name = Release;
 		};
@@ -951,7 +951,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVPSample.app/MVPSample";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVP-RouterSample.app/MVP-RouterSample";
 			};
 			name = Debug;
 		};
@@ -970,14 +970,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVPSample.app/MVPSample";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVP-RouterSample.app/MVP-RouterSample";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E5AC7A9E258D951600CB5C68 /* Build configuration list for PBXProject "MVPSample" */ = {
+		E5AC7A9E258D951600CB5C68 /* Build configuration list for PBXProject "MVP-RouterSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E5AC7ACB258D951700CB5C68 /* Debug */,
@@ -986,7 +986,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E5AC7ACD258D951700CB5C68 /* Build configuration list for PBXNativeTarget "MVPSample" */ = {
+		E5AC7ACD258D951700CB5C68 /* Build configuration list for PBXNativeTarget "MVP-RouterSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E5AC7ACE258D951700CB5C68 /* Debug */,
@@ -995,7 +995,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E5AC7AD0258D951700CB5C68 /* Build configuration list for PBXNativeTarget "MVPSampleTests" */ = {
+		E5AC7AD0258D951700CB5C68 /* Build configuration list for PBXNativeTarget "MVP-RouterSampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E5AC7AD1258D951700CB5C68 /* Debug */,
@@ -1004,7 +1004,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E5AC7AD3258D951700CB5C68 /* Build configuration list for PBXNativeTarget "MVPSampleUITests" */ = {
+		E5AC7AD3258D951700CB5C68 /* Build configuration list for PBXNativeTarget "MVP-RouterSampleUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E5AC7AD4258D951700CB5C68 /* Debug */,

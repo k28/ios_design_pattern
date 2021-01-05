@@ -11,7 +11,7 @@
         <!--Task List View Controller-->
         <scene sceneID="tiD-6m-cAN">
             <objects>
-                <viewController id="qN5-Jq-Ki3" customClass="TaskListViewController" customModule="MVPSample" sceneMemberID="viewController">
+                <viewController id="qN5-Jq-Ki3" customClass="TaskListViewController" customModule="MVP_RouterSample" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c3i-JB-DrS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

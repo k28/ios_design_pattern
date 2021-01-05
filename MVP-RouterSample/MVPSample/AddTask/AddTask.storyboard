@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9qP-tT-kxN">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Task View Controller-->
+        <scene sceneID="8Ay-sm-Rla">
+            <objects>
+                <viewController id="9qP-tT-kxN" customClass="AddTaskViewController" customModule="MVPSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pJj-zq-rLp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="タイトル" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5aC-ba-gl2" customClass="EZUTextField" customModule="EZUControl">
+                                <rect key="frame" x="20" y="64" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="期限" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUU-as-KxX">
+                                <rect key="frame" x="20" y="115.5" width="162" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="p7j-tl-Mjr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="IZi-Oe-mNF">
+                                <rect key="frame" x="194" y="106" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="PPw-x8-zJ1"/>
+                                    <constraint firstAttribute="height" constant="40" id="xwP-pS-lHG"/>
+                                </constraints>
+                            </datePicker>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fhH-iW-qAI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IZi-Oe-mNF" firstAttribute="leading" secondItem="rUU-as-KxX" secondAttribute="trailing" constant="12" id="4xd-rp-7VU"/>
+                            <constraint firstItem="rUU-as-KxX" firstAttribute="centerY" secondItem="IZi-Oe-mNF" secondAttribute="centerY" id="8Ib-kS-05z"/>
+                            <constraint firstItem="5aC-ba-gl2" firstAttribute="leading" secondItem="fhH-iW-qAI" secondAttribute="leading" constant="20" id="BS8-Bw-QL1"/>
+                            <constraint firstItem="rUU-as-KxX" firstAttribute="leading" secondItem="fhH-iW-qAI" secondAttribute="leading" constant="20" id="OsF-Vb-DPC"/>
+                            <constraint firstItem="fhH-iW-qAI" firstAttribute="trailing" secondItem="IZi-Oe-mNF" secondAttribute="trailing" constant="20" id="Poj-yV-gkc"/>
+                            <constraint firstItem="fhH-iW-qAI" firstAttribute="trailing" secondItem="5aC-ba-gl2" secondAttribute="trailing" constant="20" id="Yh7-Dj-gDH"/>
+                            <constraint firstItem="IZi-Oe-mNF" firstAttribute="top" secondItem="5aC-ba-gl2" secondAttribute="bottom" constant="8" symbolic="YES" id="ivR-jp-grt"/>
+                            <constraint firstItem="5aC-ba-gl2" firstAttribute="top" secondItem="fhH-iW-qAI" secondAttribute="top" constant="20" id="uXg-YX-CIB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="deadLineDatePicker_" destination="IZi-Oe-mNF" id="02t-i4-VYA"/>
+                        <outlet property="titleTextField_" destination="5aC-ba-gl2" id="gAS-1S-ZIv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NCo-7N-BBK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113.04347826086958" y="13.392857142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
