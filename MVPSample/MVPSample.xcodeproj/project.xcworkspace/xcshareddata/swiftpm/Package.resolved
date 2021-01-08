@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "ESUControl",
+        "repositoryURL": "https://github.com/k28/ESUControl",
+        "state": {
+          "branch": null,
+          "revision": "d888f940a64516503f363235094d7ce53c9383de",
+          "version": "0.0.1"
+        }
+      },
+      {
         "package": "MBProgressHUD",
         "repositoryURL": "https://github.com/jdg/MBProgressHUD",
         "state": {
